@@ -47,28 +47,23 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="358.875" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9An-mk-8lR">
-                                        <rect key="frame" x="116.5" y="169" width="181" height="58.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9An-mk-8lR">
+                                        <rect key="frame" x="193" y="154" width="28" height="58.5"/>
                                         <fontDescription key="fontDescription" name="RobotoMono-Bold" family="Roboto Mono" pointSize="50"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.50 * 100.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBC-q5-bIe">
-                                        <rect key="frame" x="148" y="137" width="118.5" height="23.5"/>
-                                        <fontDescription key="fontDescription" name="RobotoMono-Regular" family="Roboto Mono" pointSize="20"/>
-                                        <color key="textColor" name="funcColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" name="sumBackground"/>
                                 <constraints>
-                                    <constraint firstItem="eBC-q5-bIe" firstAttribute="centerX" secondItem="eEp-bq-4v0" secondAttribute="centerX" id="586-fm-PJ2"/>
-                                    <constraint firstItem="9An-mk-8lR" firstAttribute="top" secondItem="eBC-q5-bIe" secondAttribute="bottom" constant="8.5" id="6AD-pW-tuI"/>
+                                    <constraint firstItem="9An-mk-8lR" firstAttribute="top" secondItem="xts-c4-9F1" secondAttribute="bottom" constant="78.5" id="8ve-82-47k"/>
                                     <constraint firstItem="xts-c4-9F1" firstAttribute="top" secondItem="eEp-bq-4v0" secondAttribute="top" constant="52" id="Lrb-Dt-gF3"/>
                                     <constraint firstAttribute="trailing" secondItem="xts-c4-9F1" secondAttribute="trailing" constant="152.5" id="MOe-V0-6iB"/>
+                                    <constraint firstItem="9An-mk-8lR" firstAttribute="centerX" secondItem="eEp-bq-4v0" secondAttribute="centerX" id="czT-Z9-78v"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9An-mk-8lR" secondAttribute="trailing" id="nsr-zM-ww6"/>
                                     <constraint firstItem="xts-c4-9F1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eEp-bq-4v0" secondAttribute="leading" constant="20" symbolic="YES" id="sEE-Hf-20t"/>
-                                    <constraint firstItem="eBC-q5-bIe" firstAttribute="top" secondItem="xts-c4-9F1" secondAttribute="bottom" constant="61.5" id="tul-gO-nhe"/>
-                                    <constraint firstItem="9An-mk-8lR" firstAttribute="centerX" secondItem="eEp-bq-4v0" secondAttribute="centerX" id="uGS-y5-n1A"/>
+                                    <constraint firstItem="9An-mk-8lR" firstAttribute="height" secondItem="xts-c4-9F1" secondAttribute="height" multiplier="2.49057" id="wFQ-T5-V0G"/>
+                                    <constraint firstItem="9An-mk-8lR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eEp-bq-4v0" secondAttribute="leading" id="xga-k9-8e0"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="g2q-HU-Cpl">
@@ -87,6 +82,9 @@
                                                 <state key="normal" title="C">
                                                     <color key="titleColor" red="0.72941176470588232" green="0.72941176470588232" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JuD-wP-lDq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pq-4I-QNz">
                                                 <rect key="frame" x="91.5" y="0.0" width="60" height="60"/>
@@ -98,6 +96,9 @@
                                                 <state key="normal" title="+/-">
                                                     <color key="titleColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g10-DT-YbJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ir-OB-PRR">
                                                 <rect key="frame" x="183.5" y="0.0" width="60" height="60"/>
@@ -109,6 +110,9 @@
                                                 <state key="normal" title="%">
                                                     <color key="titleColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rx7-Jx-A9g"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4s-dq-sBq">
                                                 <rect key="frame" x="275" y="0.0" width="60" height="60"/>
@@ -120,6 +124,9 @@
                                                 <state key="normal" title="/">
                                                     <color key="titleColor" red="1" green="0.24313725490196078" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wma-Mg-bJ0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -140,6 +147,9 @@
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbI-fR-py7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGd-4O-UBu">
                                                 <rect key="frame" x="91.5" y="0.0" width="60" height="60"/>
@@ -151,6 +161,9 @@
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oqi-yl-hK2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DE-RH-d8H">
                                                 <rect key="frame" x="183.5" y="0.0" width="60" height="60"/>
@@ -162,6 +175,9 @@
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePX-Bh-h0X"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b57-Fv-yjm">
                                                 <rect key="frame" x="275" y="0.0" width="60" height="60"/>
@@ -173,6 +189,9 @@
                                                 <state key="normal" title="*">
                                                     <color key="titleColor" red="1" green="0.24313725489999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4e-Cp-mau"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -193,6 +212,9 @@
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nhB-Ux-exa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-WW-2df">
                                                 <rect key="frame" x="91.5" y="0.0" width="60" height="60"/>
@@ -204,6 +226,9 @@
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o1Y-Hk-em8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHA-Cp-iOP">
                                                 <rect key="frame" x="183.5" y="0.0" width="60" height="60"/>
@@ -215,6 +240,9 @@
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7g-Xf-pkI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emh-5q-xzJ">
                                                 <rect key="frame" x="275" y="0.0" width="60" height="60"/>
@@ -226,6 +254,9 @@
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" red="1" green="0.24313725489999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jt-HJ-mhP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -246,6 +277,9 @@
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kQG-Gs-AA2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSq-5r-mcL">
                                                 <rect key="frame" x="91.5" y="0.0" width="60" height="60"/>
@@ -257,6 +291,9 @@
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RgQ-N3-SX2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOo-mw-VdP">
                                                 <rect key="frame" x="183.5" y="0.0" width="60" height="60"/>
@@ -268,6 +305,9 @@
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0L8-TT-GcV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XD-FF-7dk">
                                                 <rect key="frame" x="275" y="0.0" width="60" height="60"/>
@@ -279,6 +319,9 @@
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" red="1" green="0.24313725489999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xot-dQ-XCm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -300,6 +343,9 @@
                                                 <state key="normal" title="0" backgroundImage="zeroButtonBackground">
                                                     <color key="titleColor" name="sumAndTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9j-Re-Qpz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d1-Mj-3Zp">
                                                 <rect key="frame" x="182.5" y="0.0" width="60" height="60"/>
@@ -311,6 +357,9 @@
                                                 <state key="normal" title=".">
                                                     <color key="titleColor" red="0.7294168472" green="0.72940289970000005" blue="0.72941237690000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l3B-eT-Li9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Li-Jf-G7O">
                                                 <rect key="frame" x="275" y="0.0" width="60" height="60"/>
@@ -322,6 +371,9 @@
                                                 <state key="normal" title="=" backgroundImage="equalButtonBackground">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DN3-RJ-da1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -349,6 +401,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g2q-HU-Cpl" secondAttribute="bottom" constant="20" id="xuJ-Ud-GQj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="9An-mk-8lR" id="jq2-vj-dPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,9 +415,6 @@
         <image name="zeroButtonBackground" width="160" height="70"/>
         <namedColor name="bottomBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="funcColor">
-            <color red="0.72549019607843135" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="sumAndTextColor">
             <color red="0.10199999809265137" green="0.10199999809265137" blue="0.10199999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
