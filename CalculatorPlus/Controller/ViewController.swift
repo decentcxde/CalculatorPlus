@@ -10,24 +10,27 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UILabel!
-
-    private var workings: String = ""
     
     private var isFinishedTypingNumber: Bool = true
+    private var calculator = CalculatorLogic()
     
     private var displayValue: Double {
         get {
-            guard let number = Double(displayLabel.text!) else {
-                fatalError("Cannot convert display label text to Double.")
-            }
-            return number
+            let text   = displayLabel.text ?? ""
+            let double = Double(text) ?? 0
+            return double
         }
         set {
-            displayLabel.text = String(newValue)
+            let isInt = floor(newValue) == newValue
+            
+            if isInt {
+                displayLabel.text = String(format: "%.0f", newValue)
+            } else {
+                displayLabel.text = newValue.withCommas()
+            }
         }
+        
     }
-    
-    private var calculator = CalculatorLogic()
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
@@ -45,23 +48,38 @@ class ViewController: UIViewController {
     
     @IBAction func numButtonPressed(_ sender: UIButton) {
         
-        if let numValue = sender.currentTitle {
-            
-            if isFinishedTypingNumber {
-                displayLabel.text = numValue
-                isFinishedTypingNumber = false
-            } else {
-                
-                if numValue == "." {
-                    let isInt = floor(displayValue ) == displayValue
-                    
-                    if !isInt {
-                        return
-                    }
-                }
-                
-                displayLabel.text = displayLabel.text! + numValue
+        guard let numValue = sender.currentTitle else { return }
+        
+        if isFinishedTypingNumber {
+            if numValue == "0" {
+                return
             }
+            
+            isFinishedTypingNumber = false
+            if numValue == "." {
+                displayLabel.text! += numValue
+            } else {
+                displayLabel.text = numValue
+            }
+        } else {
+            if numValue == "." {
+                let isInt = !displayLabel.text!.contains(".")
+                if !isInt {
+                    return
+                }
+            }
+            displayLabel.text! += numValue
         }
+    }
+}
+
+    //MARK: - Correction of fractional number residuals using NumberFormatter.
+
+extension Double {
+    func withCommas() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        numberFormatter.maximumFractionDigits = 8  // default is 3 decimals
+        return numberFormatter.string(from: NSNumber(value: self)) ?? ""
     }
 }

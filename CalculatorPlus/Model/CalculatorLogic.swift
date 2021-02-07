@@ -24,13 +24,22 @@ struct CalculatorLogic {
             case "+/-":
                 return n * -1
             case "C":
+                intermediateCalculation = nil
                 return 0
             case "%":
                 return n * 0.01
             case "=":
-                return performTwoNumberCalculation(n2: n)
+                let result = performTwoNumberCalculation(n2: n)
+                intermediateCalculation = nil
+                return result
             default:
-                intermediateCalculation = (n1: n, calcMethod: symbol)
+                var result = n
+                
+                if let previousCalcResult = performTwoNumberCalculation(n2: n) {
+                    result = previousCalcResult
+                }
+                intermediateCalculation = (n1: result, calcMethod: symbol)
+                return result
             }
         }
         
